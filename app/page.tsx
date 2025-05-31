@@ -119,7 +119,7 @@ export default function LandingPage() {
               </h2>
               <p className="text-lg text-amber-800/80 max-w-2xl text-pretty">
                 Celebrate our grand opening with these special offers. Simply
-                swipe and choose the code you'd like, then add it to your
+                swipe and choose the code you&apos;d like, then add it to your
                 VietCyclo Rewards account!
               </p>
               {/* <p className="text-md mt-3 text-amber-800/80 max-w-2xl text-pretty">
@@ -150,19 +150,19 @@ export default function LandingPage() {
                   Our Story
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-amber-900">
-                  Bringing Vietnam's Coffee Culture to Nottingham
+                  Bringing Vietnam&apos;s Coffee Culture to Nottingham
                 </h2>
                 <p className="text-gray-600">
                   VietCyclo is a passion project born from our love of authentic
                   Vietnamese coffee traditions. We source our beans directly
-                  from Vietnam's highlands, ensuring the highest quality and
-                  most authentic flavors.
+                  from Vietnam&apos;s highlands, ensuring the highest quality
+                  and most authentic flavors.
                 </p>
                 <p className="text-gray-600">
                   Our coffee is prepared using traditional methods, including
                   the iconic Vietnamese drip filter (phin), creating a rich,
-                  bold flavor that's distinctively different from Western coffee
-                  styles.
+                  bold flavor that&apos;s distinctively different from Western
+                  coffee styles.
                 </p>
                 <div className="pt-4 flex flex-wrap gap-4">
                   <div className="flex items-center gap-2">
