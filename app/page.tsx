@@ -14,10 +14,15 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Navigation */}
-      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b">
+      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b px-10 shadow-md">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Coffee className="h-6 w-6 text-amber-700" />
+            <Image
+              src="/pictures/logo.webp"
+              alt="VietCyclo Logo"
+              width={40}
+              height={40}
+            />
             <span className="text-xl font-bold text-amber-900">VietCyclo</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
