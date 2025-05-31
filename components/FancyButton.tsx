@@ -3,7 +3,7 @@ import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 
 export function AnimatedShinyTextDemo({ text }: { text?: string }) {
   return (
-    <div className="z-10 flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <div
         className={cn(
           "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"

@@ -3,7 +3,7 @@ import StackComponent from "@/components/Stack";
 
 export default function PromoSection() {
   return (
-    <section id="promo" className="py-16 bg-amber-50">
+    <section id="promo" className="py-16 bg-xanh/30">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-12">
           <div>

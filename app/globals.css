@@ -65,6 +65,13 @@
   30%, 60% {
     background-position: calc(100% + var(--shiny-width)) 0;}}}
 
+@theme {
+  --color-xanh: #005509;
+  --color-cam: #f05c22;
+  --color-nau: #442403;
+  --color-do: #ab1015;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

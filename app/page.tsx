@@ -8,7 +8,7 @@ import PromoSection from "@/components/Promo";
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-[url('/pictures/background.webp')] bg-center bg-cover">
       <Header />
 
       <main className="flex-1">

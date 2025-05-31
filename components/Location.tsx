@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function LocationSection() {
   return (
-    <section id="location" className="py-16 bg-white">
+    <section id="location" className="py-16 bg-nau/30">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="mt-5 text-3xl md:text-4xl font-bold text-amber-900 mb-4">
@@ -48,7 +48,7 @@ export default function LocationSection() {
                 <MapPin className="h-5 w-5 text-amber-700" />
                 <div>
                   <p className="text-gray-600 text-pretty">
-                    63-67 Friar Lane, Nottingham, NG1 6DH
+                    63-67 Friar Lane, NG1 6DH
                   </p>
                 </div>
               </div>
