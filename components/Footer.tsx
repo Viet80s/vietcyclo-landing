@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="text-center text-xanh opacity-80 text-md md:text-lg mb-2 p-6 border-xanh/20 bg-white">
+    <footer className="text-center text-xanh opacity-80 text-md md:text-lg p-6 border-xanh/20 bg-white">
       <a href={"mailto:info@vietcyclo.co.uk"}>
         <p className="underline">Email us: info@vietcyclo.co.uk</p>
       </a>

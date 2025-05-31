@@ -6,7 +6,7 @@ import { AnimatedShinyTextDemo } from "@/components/FancyButton";
 export default function HeroSection() {
   return (
     <section id="home" className="relative">
-      <div className="absolute inset-0 bg-nau/30 z-10" />
+      <div className="absolute inset-0 z-10" />
       <div className="relative h-[70vh] overflow-hidden">
         <Image
           src="/placeholder.svg?height=1080&width=1920"

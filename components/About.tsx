@@ -3,7 +3,7 @@ import { Coffee, Clock } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-16 bg-do/20">
+    <section id="about" className="py-16">
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="relative h-[400px] rounded-xl overflow-hidden">
