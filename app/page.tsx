@@ -6,9 +6,12 @@ import {
   Instagram,
   Facebook,
   ChevronRight,
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import StackComponent from "@/components/Stack";
+import Link from "next/link";
+import { AnimatedShinyTextDemo } from "@/components/FancyButton";
 
 export default function LandingPage() {
   return (
@@ -42,7 +45,7 @@ export default function LandingPage() {
               href="#about"
               className="text-sm font-medium hover:text-amber-700 transition-colors"
             >
-              About Us
+              About VietCyclo
             </a>
             <a
               href="#location"
@@ -51,9 +54,11 @@ export default function LandingPage() {
               Find Us
             </a>
           </nav>
-          <Button size="sm" className="bg-amber-700 hover:bg-amber-800">
-            Visit Us
-          </Button>
+          <Link href="#location">
+            <Button size="sm" className="bg-amber-700 hover:bg-amber-800">
+              Visit Us
+            </Button>
+          </Link>
         </div>
       </header>
 
@@ -72,8 +77,8 @@ export default function LandingPage() {
           </div>
           <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
             <div className="max-w-3xl space-y-4">
-              <div className="inline-block rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-900 mb-2">
-                Now Open in Nottingham
+              <div className="inline-block rounded-full px-3 py-1 text-sm text-amber-900 mb-2">
+                <AnimatedShinyTextDemo text={"✨ Now Open in Nottingham ✨"} />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-md">
                 Experience Authentic{" "}
@@ -84,105 +89,51 @@ export default function LandingPage() {
                 Nottingham&apos;s newest coffee destination
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
-                  Get Promo Codes
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 text-white border-white hover:bg-white/20"
-                >
-                  Our Menu
-                </Button>
+                <Link href="#promo">
+                  <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
+                    Get Promo Codes
+                  </Button>
+                </Link>
+                <Link href="https://vietcyclo.co.uk/menu-category">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-white/10 text-white border-white hover:bg-white/20"
+                  >
+                    VietCyclo Menu
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
         </section>
-
         {/* Promo Code Section */}
         <section id="promo" className="py-16 bg-amber-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
-              <div className="inline-block rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-900 mb-2">
-                Limited Time Offer
+              <div>
+                <AnimatedShinyTextDemo text={"🎉 Limited Time Offer 🎉"} />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+              <h2 className="text-3xl mt-5 md:text-4xl font-bold text-amber-900 mb-4">
                 Exclusive Promo Codes
               </h2>
-              <p className="text-lg text-amber-800/80 max-w-2xl">
+              <p className="text-lg text-amber-800/80 max-w-2xl text-pretty">
                 Celebrate our grand opening with these special offers. Simply
-                show the code when ordering!
+                swipe and choose the code you'd like, then add it to your
+                VietCyclo Rewards account!
               </p>
+              {/* <p className="text-md mt-3 text-amber-800/80 max-w-2xl text-pretty">
+                Your code will be used once and automatically applied to your
+                next purchase at our Nottingham location. But you can add codes
+                as much as you want to your account!
+              </p> */}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Promo Code 1 */}
-              <Card className="overflow-hidden border-2 border-amber-200 bg-white">
-                <div className="bg-amber-700 py-2 text-center text-white font-medium">
-                  FIRST TIME VISITORS
-                </div>
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-amber-900 mb-2">
-                    WELCOME25
-                  </h3>
-                  <p className="text-amber-700 font-medium mb-4">
-                    25% OFF YOUR FIRST ORDER
-                  </p>
-                  <p className="text-gray-600 mb-6">
-                    Valid for all menu items. One-time use per customer.
-                  </p>
-                  <Button className="w-full bg-amber-600 hover:bg-amber-700">
-                    Copy Code
-                  </Button>
-                </CardContent>
-              </Card>
-
-              {/* Promo Code 2 */}
-              <Card className="overflow-hidden border-2 border-amber-200 bg-white">
-                <div className="bg-amber-700 py-2 text-center text-white font-medium">
-                  COFFEE LOVERS
-                </div>
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-amber-900 mb-2">
-                    VIETBOGO
-                  </h3>
-                  <p className="text-amber-700 font-medium mb-4">
-                    BUY ONE GET ONE FREE
-                  </p>
-                  <p className="text-gray-600 mb-6">
-                    Valid on all traditional Vietnamese coffee drinks.
-                  </p>
-                  <Button className="w-full bg-amber-600 hover:bg-amber-700">
-                    Copy Code
-                  </Button>
-                </CardContent>
-              </Card>
-
-              {/* Promo Code 3 */}
-              <Card className="overflow-hidden border-2 border-amber-200 bg-white">
-                <div className="bg-amber-700 py-2 text-center text-white font-medium">
-                  WEEKEND SPECIAL
-                </div>
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-amber-900 mb-2">
-                    WEEKEND10
-                  </h3>
-                  <p className="text-amber-700 font-medium mb-4">
-                    10% OFF + FREE PASTRY
-                  </p>
-                  <p className="text-gray-600 mb-6">
-                    Valid Saturday and Sunday only. Min. order £10.
-                  </p>
-                  <Button className="w-full bg-amber-600 hover:bg-amber-700">
-                    Copy Code
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
+            <StackComponent />
           </div>
         </section>
 
-        {/* About Section
+        {/* About Section */}
         <section id="about" className="py-16">
           <div className="container px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -230,108 +181,13 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
-        </section> */}
-
-        {/* Featured Drinks */}
-        <section className="py-16 bg-amber-900 text-white">
-          <div className="container px-4 md:px-6">
-            <div className="text-center mb-12">
-              <div className="inline-block rounded-full bg-amber-800 px-3 py-1 text-sm text-amber-100 mb-2">
-                Our Specialties
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-100 mb-4">
-                Signature Vietnamese Coffee
-              </h2>
-              <p className="text-amber-100/80 max-w-2xl mx-auto">
-                Experience the unique flavors that make Vietnamese coffee
-                world-famous
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Coffee 1 */}
-              <div className="bg-amber-800/50 rounded-lg p-6 text-center">
-                <div className="h-40 w-40 mx-auto mb-4 relative">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Cà Phê Sữa Đá"
-                    fill
-                    className="object-cover rounded-full"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-amber-100 mb-2">
-                  Cà Phê Sữa Đá
-                </h3>
-                <p className="text-amber-100/80">
-                  Traditional iced coffee with condensed milk
-                </p>
-              </div>
-
-              {/* Coffee 2 */}
-              <div className="bg-amber-800/50 rounded-lg p-6 text-center">
-                <div className="h-40 w-40 mx-auto mb-4 relative">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Egg Coffee"
-                    fill
-                    className="object-cover rounded-full"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-amber-100 mb-2">
-                  Egg Coffee
-                </h3>
-                <p className="text-amber-100/80">
-                  Coffee topped with whipped egg cream
-                </p>
-              </div>
-
-              {/* Coffee 3 */}
-              <div className="bg-amber-800/50 rounded-lg p-6 text-center">
-                <div className="h-40 w-40 mx-auto mb-4 relative">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Coconut Coffee"
-                    fill
-                    className="object-cover rounded-full"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-amber-100 mb-2">
-                  Coconut Coffee
-                </h3>
-                <p className="text-amber-100/80">
-                  Blended coffee with coconut cream
-                </p>
-              </div>
-
-              {/* Coffee 4 */}
-              <div className="bg-amber-800/50 rounded-lg p-6 text-center">
-                <div className="h-40 w-40 mx-auto mb-4 relative">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Phin Filter Coffee"
-                    fill
-                    className="object-cover rounded-full"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-amber-100 mb-2">
-                  Phin Filter Coffee
-                </h3>
-                <p className="text-amber-100/80">
-                  Slow-dripped traditional black coffee
-                </p>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Location Section */}
-        <section id="location" className="py-16">
+        <section id="location" className="py-16 bg-white">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <div className="inline-block rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-900 mb-2">
-                Visit Us
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+              <h2 className="mt-5 text-3xl md:text-4xl font-bold text-amber-900 mb-4">
                 Find Us in Nottingham
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -348,41 +204,47 @@ export default function LandingPage() {
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span className="text-gray-600">Monday - Friday</span>
-                    <span className="font-medium">7:00 AM - 8:00 PM</span>
+                    <span className="font-medium text-gray-600">
+                      7:00 AM - 8:00 PM
+                    </span>
                   </li>
                   <li className="flex justify-between">
                     <span className="text-gray-600">Saturday</span>
-                    <span className="font-medium">8:00 AM - 9:00 PM</span>
+                    <span className="font-medium text-gray-600">
+                      8:00 AM - 9:00 PM
+                    </span>
                   </li>
                   <li className="flex justify-between">
                     <span className="text-gray-600">Sunday</span>
-                    <span className="font-medium">9:00 AM - 6:00 PM</span>
+                    <span className="font-medium text-gray-600">
+                      9:00 AM - 6:00 PM
+                    </span>
                   </li>
                 </ul>
 
                 <div className="mt-8 space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-amber-700 mt-1" />
+                  <div className="flex items-center gap-3">
+                    <MapPin className="h-5 w-5 text-amber-700" />
                     <div>
-                      <h4 className="font-medium">Address</h4>
                       <p className="text-gray-600">
-                        123 Market Street, Nottingham, NG1 6HX
+                        63-65 Friar Lane, Nottingham, NG1 6DH
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Phone className="h-5 w-5 text-amber-700 mt-1" />
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 text-amber-700" />
                     <div>
-                      <h4 className="font-medium">Phone</h4>
                       <p className="text-gray-600">+44 115 123 4567</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8">
-                  <Button className="w-full bg-amber-700 hover:bg-amber-800">
-                    Get Directions
-                  </Button>
+                  <Link href="https://maps.app.goo.gl/CqDN1B3QJAi34dti9">
+                    <Button className="w-full bg-amber-700 hover:bg-amber-800">
+                      Get Directions
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -416,91 +278,36 @@ export default function LandingPage() {
               Don&apos;t forget to bring your promo code for special discounts
               on your visit!
             </p>
-            <Button size="lg" className="bg-amber-700 hover:bg-amber-800">
-              View All Promotions <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="#promo">
+              <Button size="lg" className="bg-amber-700 hover:bg-amber-800">
+                View All Promotions <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-amber-900 text-amber-100 py-12">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Coffee className="h-6 w-6" />
-                <span className="text-xl font-bold">VietCyclo</span>
-              </div>
-              <p className="text-amber-100/80 mb-6">
-                Authentic Vietnamese coffee experience in the heart of
-                Nottingham.
-              </p>
-              <div className="flex gap-4">
-                <a href="#" className="hover:text-white">
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a href="#" className="hover:text-white">
-                  <Facebook className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-amber-100/80 hover:text-white">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-amber-100/80 hover:text-white">
-                    Menu
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-amber-100/80 hover:text-white">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-amber-100/80 hover:text-white">
-                    Promotions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-amber-100/80 hover:text-white">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg mb-4">Newsletter</h3>
-              <p className="text-amber-100/80 mb-4">
-                Subscribe to get updates on new promotions and seasonal
-                specials.
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="px-3 py-2 rounded-md text-amber-900 flex-1"
-                />
-                <Button className="bg-amber-600 hover:bg-amber-700">
-                  Subscribe
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-amber-800 mt-10 pt-6 text-center text-amber-100/60">
-            <p>
-              &copy; {new Date().getFullYear()} VietCyclo Coffee. All rights
-              reserved.
-            </p>
+      <footer className="text-center text-xanh opacity-80 text-md md:text-lg my-8 p-6 border-t border-xanh/20">
+        <a href={"mailto:info@vietcyclo.co.uk"}>
+          <p className="underline">Email us: info@vietcyclo.co.uk</p>
+        </a>
+        <p className="mt-1">63-67 Friar Lane, Nottingham NG1 6DH</p>
+        <p className="mt-2">
+          &copy; {new Date().getFullYear()} Viet Cyclo LTD. All Rights Reserved.
+        </p>
+        <div className="text-right flex items-center text-xanh text-md justify-center mt-4">
+          <Link href={"https://kitebusinesssolution.com/"}>
+            <div className="mr-2">Powered by KITE</div>
+          </Link>
+          <div>
+            <Image
+              src="/pictures/kite.png"
+              alt="VietCyclo Logo"
+              width={30}
+              height={30}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 70vw"
+            />
           </div>
         </div>
       </footer>

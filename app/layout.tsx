@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 // Font files can be colocated inside of `pages`
 const myFont = Inter({ subsets: ["latin"] });
@@ -110,6 +111,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
