@@ -40,7 +40,7 @@ export default function StackComponent() {
       <Link href="https://vietcyclo.co.uk/rewards">
         <Button
           variant={"secondary"}
-          className="flex items-center mt-8 text-lg h-12"
+          className="flex items-center mt-8 h-12 text-sm"
         >
           Add copied Code to VietCyclo account{" "}
           <TicketCheck className="ml-1 size-6" />
