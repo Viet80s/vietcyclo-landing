@@ -21,13 +21,13 @@ export default function AboutSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-amber-900">
               Bringing Vietnam&apos;s Coffee Culture to Nottingham
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-pretty">
               VietCyclo is a passion project born from our love of authentic
               Vietnamese coffee traditions. We source our beans directly from
               Vietnam&apos;s highlands, ensuring the highest quality and most
               authentic flavors.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-pretty">
               Our coffee is prepared using traditional methods, including the
               iconic Vietnamese drip filter (phin), creating a rich, bold flavor
               that&apos;s distinctively different from Western coffee styles.

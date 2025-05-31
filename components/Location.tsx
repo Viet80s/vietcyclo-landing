@@ -47,7 +47,7 @@ export default function LocationSection() {
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-amber-700" />
                 <div>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-pretty">
                     63-67 Friar Lane, Nottingham, NG1 6DH
                   </p>
                 </div>
